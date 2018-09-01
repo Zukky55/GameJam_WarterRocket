@@ -5,6 +5,7 @@ using UnityEngine;
 public class Background : MonoBehaviour
 {
     [SerializeField] float m_scrollSpeed = 1.0f;
+    public bool m_flag = true;
 
     /// <summary>
     /// スクロール速度。正の値の時には下へスクロールする。負の値の時には上へスクロールする
@@ -17,7 +18,10 @@ public class Background : MonoBehaviour
 
     void Update()
     {
-        // Time.deltaTime を使って滑らかに縦にスクロールさせる
-        transform.Translate(Vector2.left * Time.deltaTime * m_scrollSpeed);
+        if(m_flag)
+        {
+            // Time.deltaTime を使って滑らかに縦にスクロールさせる
+            transform.Translate(Vector2.left * Time.deltaTime * m_scrollSpeed);
+        }
     }
 }
