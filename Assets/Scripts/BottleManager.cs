@@ -42,8 +42,8 @@ public class BottleManager : MonoBehaviour {
     private bool clickFlag;
 
     //背景のスクリプトとゲームオブジェクト
-    [SerializeField] GameObject m_background;
-    Background m_rb;
+    private GameObject m_background;
+    private Background m_rb;
 
     //クリック処理
     private void Click() {
@@ -143,6 +143,7 @@ public class BottleManager : MonoBehaviour {
     }
 
 	void Start () {
+        FadeManager.FadeIn();
         gameState = GameState.TraverseState;
         stageState = StageState.LaunchState;
         clickTimer = launchTime;
@@ -151,6 +152,7 @@ public class BottleManager : MonoBehaviour {
         SetUI(gameState);
         //UIManager.GetUIManager().UpdateTimer(clickTimer);
         //Background
+        m_background = GameObject.Find("Background");
         m_rb = m_background.GetComponent<Background>();
 	}
 	
