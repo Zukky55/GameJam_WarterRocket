@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BottleController : MonoBehaviour {
-
-    [SerializeField] GameObject m_background;
+public class TitleManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
