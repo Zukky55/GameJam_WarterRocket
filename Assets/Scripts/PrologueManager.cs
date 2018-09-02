@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PrologueManager : MonoBehaviour {
+public class PrologueManager : MonoBehaviour
+{
 
     private GameObject m_PCanvas;
 
@@ -13,10 +14,16 @@ public class PrologueManager : MonoBehaviour {
 
     public void Update()
     {
-        if(m_PCanvas == null)
+        if (m_PCanvas == null)
         {
-            FadeManager.FadeOut(2, 1.0f);
+            StartCoroutine("SceneWait");
         }
+    }
+
+    private IEnumerator SceneWait()
+    {
+        yield return new WaitForSeconds(1f);
+        FadeManager.FadeOut(2, 1.0f);
     }
 
 }

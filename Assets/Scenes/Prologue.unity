@@ -508,8 +508,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1734385592}
   - component: {fileID: 1734385591}
+  - component: {fileID: 1734385593}
   m_Layer: 0
-  m_Name: BgmOfPrologue
+  m_Name: PrologueBgm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -525,7 +526,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: afaed634b2f302943b5e81606785fbec, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -617,12 +618,24 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1734385590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 870.7656, y: -334.555, z: 20.196045}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1734385593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1734385590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 061ef3158a870094e89a547671da2d63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_flag: 0
 --- !u!1 &1892894177
 GameObject:
   m_ObjectHideFlags: 0

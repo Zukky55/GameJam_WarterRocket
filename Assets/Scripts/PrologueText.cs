@@ -21,16 +21,15 @@ public class PrologueText : MonoBehaviour
     {
         float y = Input.GetAxisRaw("Vertical");
 
-        float move = y * m_speed;
+//        float move = y * m_speed;
 
         //Y軸プラス方向にtextを動かしていく
         transform.Translate(transform.up * m_speed);
 
-        if (transform.localPosition.y >= 1000)
+        if (transform.localPosition.y >= 2000)
         {
             Destroy(m_canvas);
             m_canvas = null;
         }
-        Debug.Log(m_canvas == null);
     }
 }
