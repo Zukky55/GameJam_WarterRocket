@@ -19,7 +19,6 @@ public class PrologueText : MonoBehaviour
 
     void Update()
     {
-        float y = Input.GetAxisRaw("Vertical");
 
 //        float move = y * m_speed;
 

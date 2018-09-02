@@ -8,7 +8,6 @@ public class BgmManager : MonoBehaviour
     private AudioSource m_audio;
     /// <summary>PrologueCanvas</summary>
     GameObject m_PCanvas;
-    [SerializeField] bool m_flag = false;
 
     public void Start()
     {
