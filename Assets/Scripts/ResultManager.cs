@@ -7,9 +7,10 @@ using System.Linq;
 public class ResultManager : MonoBehaviour
 {
     /// <summary>Score of Stage1</summary>
-    [SerializeField] Text[] m_scoreTexts;
+    [SerializeField] Text[] m_scoreTexts = new Text[4];
     /// <summary>ResultCanvas</summary>
-    [SerializeField] GameObject m_ResultCanvas;
+    [SerializeField] GameObject m_resultTexts;
+    [SerializeField] float m_speed;
     /// <summary>ステージ毎のScore(圧力)</summary>
     private int[] m_scores = new int[3];
     /// <summary>highScore</summary>
@@ -18,8 +19,9 @@ public class ResultManager : MonoBehaviour
     private string m_highScoreKey = "highScore";
     /// <summary>Total Score</summary>
     private int m_totalScore;
-    /// <summary>コルーチンフラグ</summary>
+    /// <summary>ResultFadeInフラグ</summary>
     private bool m_isRunning = true;
+    
     
 
 
@@ -72,10 +74,13 @@ public class ResultManager : MonoBehaviour
     /// <summary>各テキスト欄にスコアを表示させる</summary>
     private void ShowScore()
     {
-        for (int i = 0; i < m_scoreTexts.Length; i++)
+        for (int i = 0; i < 3; i++)
         {
+            Debug.Log(m_scoreTexts.Length);
             m_scoreTexts[i].text = m_scores[i].ToString() + "圧力";
+            Debug.Log("m_scoreTexts" + m_scoreTexts[i]);
         }
+        m_scoreTexts[3].text = m_totalScore.ToString() + "圧力";
 
     }
 
@@ -85,15 +90,21 @@ public class ResultManager : MonoBehaviour
         AddScores("stage1","stage2","stage3");
         ShowScore();
         Save();
-//        StartCoroutine("ResultFadeIn");
+        ResultFadeIn();
     }
-/*
-    IEnumrator ResultFadeIn()
+
+    private void ResultFadeIn()
     {
-        if(m_isRunning)
+        if (m_isRunning)
         {
-            m_ResultCanvas;
-        }
-    }
-*/
+            Debug.Log(m_resultTexts.transform);
+            m_resultTexts.transform.Translate(transform.up * m_speed);
+/*            if (transform.localPosition.y >= -83)
+            {
+                m_isRunning = false;
+                return;
+            }
+*/        }
+    }   
+
 }
