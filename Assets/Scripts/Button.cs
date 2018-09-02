@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-
-    public void OnClick()
+    /// <summary>ボタン押されたらシーン遷移</summary>
+    /// <param name="sceneNumber">遷移先インデックス</param>
+    public void OnClick(int sceneNumber)
     {
         Debug.Log("OnClick()");
-        FadeManager.FadeOut(1,1.0f);
+        FadeManager.FadeOut(sceneNumber,1.0f);
     }
 }
