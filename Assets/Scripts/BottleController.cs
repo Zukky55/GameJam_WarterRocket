@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class BottleController : MonoBehaviour {
 
-    [SerializeField] GameObject m_background;
-
 	// Use this for initialization
 	void Start () {
 		

@@ -61,11 +61,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\BottleAnimator.cs" />
+    <Compile Include="Assets\Script\EnemyManager.cs" />
+    <Compile Include="Assets\Script\HakaseController.cs" />
+    <Compile Include="Assets\Script\LaserBeamManager.cs" />
+    <Compile Include="Assets\Script\NextSceneController.cs" />
+    <Compile Include="Assets\Script\ShieldManager.cs" />
+    <Compile Include="Assets\Script\SoundEffectsManager.cs" />
     <Compile Include="Assets\Scripts\Background.cs" />
+    <Compile Include="Assets\Scripts\BgmManager.cs" />
     <Compile Include="Assets\Scripts\BottleController.cs" />
     <Compile Include="Assets\Scripts\BottleManager.cs" />
+    <Compile Include="Assets\Scripts\Button.cs" />
+    <Compile Include="Assets\Scripts\FadeManager.cs" />
+    <Compile Include="Assets\Scripts\PrologueManager.cs" />
+    <Compile Include="Assets\Scripts\PrologueText.cs" />
     <Compile Include="Assets\Scripts\QuadScroller.cs" />
+    <Compile Include="Assets\Scripts\ResultManager.cs" />
+    <Compile Include="Assets\Scripts\TitleManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
+    <None Include="Assets\VolumetricLines\Shaders\_StripShader.cginc" />
+    <None Include="Assets\VolumetricLines\Shaders\Additive.shader" />
+    <None Include="Assets\VolumetricLines\Shaders\AlphaBlended.shader" />
+    <None Include="Assets\VolumetricLines\Shaders\Strip-Additive.shader" />
+    <None Include="Assets\VolumetricLines\Shaders\Fast-AlphaBlended.shader" />
+    <None Include="Assets\VolumetricLines\Shaders\Strip-AlphaBlended.shader" />
+    <None Include="Assets\VolumetricLines\Shaders\Fast-Additive.shader" />
+    <None Include="Assets\VolumetricLines\Shaders\_SimpleShader.cginc" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/GameJam/WaterRocket/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -309,12 +331,6 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{F6455BD2-B394-A0E1-4B58-E461188A6169}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
